@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: #88b9ea90;
+            padding: 20px;
+            text-align: center;
+            
+        }
+         nav a {
+            margin: 15px;
+            text-decoration: none;
+            color: #fefeff;
+            font-weight: bold;
+        }
+        nav a:hover {
+            
+            color: black;
+            
+        }
+        
+
+        div {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        body {
+             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer {
+            background-color: #88b9ea90;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        form label {
+            display: flex;
+            margin-top: 10px;
+            
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .letreiro {
+      font-size: 2rem;
+      border-right: 3px solid #0a0101;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(10, end) infinite alternate;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #000;
+      display: inline-block;
+      height: 2.8rem;    /* altura fixa da caixa */
+      padding: 5px 10px;
+    }
+
+   
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 15ch; }
+    }
+
+    
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <header>
+    
+        <h1>Caio Machado</h1>
+        <div id="letreiro" class="letreiro"></div>
+
+        <nav>
+            <a href="#Sobre">Sobre</a>
+            <a href="#Projetos">Projetos</a>
+            <a href="#Habilidades">Habilidades</a>
+            <a href="">Contato</a>
+    </header>
+
+    <div id="#Sobre"> 
+        <h2>Sobre Mim</h2>
+            <p>Olá, meu nome é Caio Machado, sou estudante de Engenharia de Software e tenho interesse em desenvolvimento web.</p>
+    </div>  
+    
+    <div id="#Projetos"> 
+        <h2>Projetos</h2>
+        <ul>
+            <li> <strong> Portifolio Web</strong>: Site pessoal com projetos e blog</li>
+            <li> <strong> App de tarefas</strong>: Site pessoal com projetos e blog</li>
+            <li> <strong> Calculadora Financeira</strong>: Site pessoal com projetos e blog</li>
+    </div> 
+
+    <div id="#Habilidades"> 
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Git e GitHub</li>
+            <li>UX/UI básico</li>
+    </div> 
+
+    <div id="#Contato"> 
+        <h2>Contato</h2>
+        <form action="https:// method.com" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required rows="5"></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Caio Machado</p>
+        <p>Contato: <a href="mailto:caio.ccom07@gmail.com">caio.ccom07@gmail.com</a></p>
+    </footer>
+
+    <script>
+        // JavaScript para interatividade do nome "Caio Machado"
+
+        const nome = [ "HTML", "CSS", "JavaScript", "Git", "GitHub", "UX/UI"];
+        const letreiro = document.getElementById("letreiro"); 
+        let index = 0;
+        
+        function mudarNome() {
+          letreiro.textContent = nome[index];
+            index = (index + 1) % nome.length;
+            
+        }
+
+        mudarNome(); // Chama a função inicialmente
+        setInterval(mudarNome, 3000); // Muda o nome a cada 3 segundos
+    </script>
+</body>
+
+</html>
